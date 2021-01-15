@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const ProfileMentor = (props) => {
+/*const ProfileMentor = (props) => {
   return (
     <div>
       <h1>Ded-Sec | Mentor Space</h1>
@@ -20,6 +20,6 @@ const ProfileMentor = (props) => {
       </div>
     </div>
   );
-};
+};*/
 
 export default Profile;

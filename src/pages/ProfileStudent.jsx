@@ -1,6 +1,7 @@
 import React from "react";
 
-const ProfileStudent = (props) => {
+
+/*const ProfileStudent = (props) => {
   return (
     <div>
       <h1>Ded-Sec | Student Space</h1>
@@ -20,6 +21,6 @@ const ProfileStudent = (props) => {
       </div>
     </div>
   );
-};
+};*/
 
 export default Profile;
