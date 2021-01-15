@@ -1,7 +1,7 @@
-import React from "react";
+/*import React from "react";
 
 
-/*const ProfileStudent = (props) => {
+const ProfileStudent = (props) => {
   return (
     <div>
       <h1>Ded-Sec | Student Space</h1>
@@ -21,6 +21,6 @@ import React from "react";
       </div>
     </div>
   );
-};*/
+};
 
-export default Profile;
+export default ProfileStudent;*/

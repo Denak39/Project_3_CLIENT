@@ -30,7 +30,7 @@ class Home extends React.Component {
 
         <div class="main-right">
           <div class="student">
-            <a class="icon" href="#"><i class="fas fa-book-dead"></i></a>
+            <a class="icon" href="/"><i class="fas fa-book-dead"></i></a>
             <h4 class="tracking-in-expand">accountType</h4>
             <h4 class="tracking-in-expand">Student</h4>
             <ul class="student-text">
@@ -40,7 +40,7 @@ class Home extends React.Component {
           </div>
           <button class="join-us icon glow-button">Join us</button>
           <div class="mentor">
-            <a class="icon" href="#"><i class="fas fa-skull-crossbones"></i></a>
+            <a class="icon" href="/"><i class="fas fa-skull-crossbones"></i></a>
             <h4 class="tracking-in-expand">accountType</h4>
             <h4 class="tracking-in-expand">Mentor</h4>
             <ul class="mentor-text">
