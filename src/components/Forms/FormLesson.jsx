@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import apiHandler from "../../api/apiHandler";
 // import { Redirect } from "react-router-dom";
+import ControlledEditor from "../../components/textEditor";
+import Rating from "react-rating";
 
 class FormLesson extends Component {
   state = {
@@ -40,22 +42,60 @@ class FormLesson extends Component {
         <label htmlFor="name">Name</label>
         <input
           onChange={this.handleChange}
-          value={this.state.email}
+          value={this.state.name}
           type="name"
           id="name"
           name="name"
         />
         <label htmlFor="category">Main category</label>
-        <select name="category" id="category" required>
-          <option value="-1" disabled selected>
+        <select
+          onChange={this.handleChange}
+          value={this.state.category}
+          name="category"
+          id="category"
+          required
+        >
+          <option value="-1" disabled>
             Choose a category
           </option>
-          <option value="action">action</option>
-          <option value="RPG">RPG</option>
-          <option value="fighting">fighting</option>
+          <option value="Network">Network</option>
+          <option value="Programing">Programing</option>
+          <option value="Hacking">Hacking</option>
         </select>
-        <label htmlFor="difficulty">Difficulty</label>
-        <input type="password" id="password" name="password" />
+        <label htmlFor="difficulty">Select a difficulty</label>
+        <Rating
+          onChange={this.handleChange}
+          value={this.state.difficulty}
+          id="difficulty"
+          name="difficulty"
+          emptySymbol={<span className="icon-text">-</span>}
+          fullSymbol={[1, 2, 3, 4, 5].map((n) => (
+            <span className="icon-text">{n}</span>
+          ))}
+        />
+        {/* <select
+          onChange={this.handleChange}
+          value={this.state.difficulty}
+          name="difficulty"
+          id="difficulty"
+          required
+        >
+          <option value="-1" disabled selected>
+            Choose a difficulty
+          </option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select> */}
+
+        <ControlledEditor
+          onChange={this.handleChange}
+          value={this.state.content}
+          id="content"
+          name="content"
+        />
         <button>Submit</button>
       </form>
     );
