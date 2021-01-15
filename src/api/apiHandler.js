@@ -50,4 +50,11 @@ export default {
       .then((res) => res.data)
       .catch(errorHandler);
   },
+
+  lesson(lessonInfo) {
+    return service
+      .post("/api/lessons", lessonInfo)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
 };

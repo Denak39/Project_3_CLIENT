@@ -8,8 +8,11 @@ class FormSignup extends Component {
   static contextType = UserContext;
 
   state = {
+    username: "",
     email: "",
     password: "",
+    accountType: "",
+    profileImage: "",
   };
 
   handleChange = (event) => {
@@ -38,7 +41,20 @@ class FormSignup extends Component {
     }
 
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form
+        autoComplete="off"
+        className="form"
+        onChange={this.handleChange}
+        onSubmit={this.handleSubmit}
+      >
+        <label htmlFor="username">Username</label>
+        <input
+          onChange={this.handleChange}
+          value={this.state.username}
+          type="text"
+          id="username"
+          name="username"
+        />
         <label htmlFor="email">Email</label>
         <input
           onChange={this.handleChange}
@@ -46,6 +62,7 @@ class FormSignup extends Component {
           type="email"
           id="email"
           name="email"
+          placeholer="hacker@hack.com"
         />
         <label htmlFor="password">Password</label>
         <input
@@ -54,6 +71,23 @@ class FormSignup extends Component {
           type="password"
           id="password"
           name="password"
+        />
+        <label htmlFor="accountType">Role</label>
+        <input
+          onChange={this.handleChange}
+          value={this.state.password}
+          type="accountType"
+          id="accountType"
+          name="accountType"
+        />
+        <label htmlFor="profileImage">Image:</label>
+        <input
+          onChange={this.handleChange}
+          value={this.state.profileImage}
+          type="file"
+          name="image"
+          id="image"
+          alt=""
         />
         <button>Submit</button>
       </form>
