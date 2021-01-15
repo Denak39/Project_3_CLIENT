@@ -5,7 +5,8 @@ import Home from "./pages/Home";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import ProtectedRoute from "./components/ProtectedRoute";
-import Profile from "./pages/Profile";
+import ProfileMentor from "./pages/ProfileMentor";
+import ProfileStudent from "./pages/ProfileStudent";
 import Lesson from "./pages/LessonCreate";
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/signin" component={Signin} />
         <Route exact path="/signup" component={Signup} />
-        <ProtectedRoute exact path="/profile" component={Profile} />
+        <ProtectedRoute exact path="/profile/mentor" component={ProfileMentor} />
+        <ProtectedRoute exact path="/profile/student" component={ProfileStudent} />
         <Route exact path="/lesson/create" component={Lesson} />
       </Switch>
     </div>

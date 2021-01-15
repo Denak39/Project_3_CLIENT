@@ -1,17 +1,14 @@
 import React from "react";
-import NavMain from "../components/NavMain";
 
 
 class Home extends React.Component {
   render() {
 
-    
+
     return (
       <div class="tracking-in-expand">
       <div>
       
-     < NavMain />
-
       <section class="section-main">
         <div class="main-left">
           <div class="who">
