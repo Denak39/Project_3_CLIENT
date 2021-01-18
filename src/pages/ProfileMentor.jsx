@@ -1,39 +1,18 @@
 import React, { Component } from "react";
+// import { Link } from "react-router-dom";
 import { withUser } from "../components/Auth/withUser";
-//var imageMentor = require('../public/teacher.png')
-/*
-class ProfileMentor extends Component {
-  state = {
-    users: []
-  }
+import apiHandler from "../api/apiHandler";
 
-  componentDidMount() {
-    apiHandler.getAllUsers()
-    .then((apiRes) => {
-      console.log(apiRes);
-      this.setState({users : apiRes})
+const ProfileMentor = (props) => {
 
-    })
-  }
-  render() {
-    */
-
-    const ProfileMentor = (props) => {
-      //console.log(props.context);
-      //console.log(props.context.user.email)  
-  return (
-    <div>
-    {/* <h1>Hello</h1> */}
+    return (
+      <div>
   
-    
-    
-      <h1>Ded-Sec</h1>
-    <hr/>
-    <h1>Mentor Space</h1>
-      <div className="">
-      <img src='../public/teacher.png' alt='' />
-      </div>
-      <h3>Mentor privileges:</h3>
+      <h1>Ded-Sec</h1> 
+      <hr/>
+      <h1>Mentor Space</h1>
+      <img src="../../public/teacher.png" alt="mentor"/>
+      <p>Mentor privileges:</p>
       <ul>
         <li>Create exchange rooms, learning material and other supports.</li>
         <li>Participate to the community as an influent speaker, be an ambassador of DedSec Webwide.</li>
@@ -48,9 +27,9 @@ class ProfileMentor extends Component {
       </div>
       <button>Create Lesson</button>
     </div>
+    
   );
 };
-
 
 
 export default withUser(ProfileMentor);

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-// import Button from "../Button";
-// import UploadWidget from "../UploadWidget";
-// import FeedBack from "../FeedBack";
+import Button from "../Button";
+import UploadWidget from "../UploadWidget";
+import FeedBack from "../FeedBack";
 import apiHandler from "../../api/apiHandler";
 import UserContext from "../Auth/UserContext";
 
@@ -39,6 +39,7 @@ class FormProfile extends Component {
     const key = event.target.name; // This function requires that you have the "name" attribute on your form fields.
     const value = event.target.value;
     this.setState({ user: { ...this.state.user, [key]: value } });
+    console.log(this.state.user.username);
   };
 
   isValidInput = (key) => {
@@ -69,7 +70,7 @@ class FormProfile extends Component {
     if (this.imageRef.current.files[0]) {
       fd.append("profileImg", this.imageRef.current.files[0]);
     }
-
+    console.log(this.state.user);
     apiHandler
       .updateUser(fd)
       .then((data) => {
@@ -116,7 +117,6 @@ class FormProfile extends Component {
       <section className="form-section">
         <form autoComplete="off" className="form" onSubmit={this.handleSubmit}>
           <h1 className="header">Edit profile</h1>
-
           <div className="round-image user-image">
             <img
               src={this.state.tmpUrl || this.state.user.profileImg}
@@ -124,23 +124,14 @@ class FormProfile extends Component {
             />
           </div>
           <div className="form-group">
-            {/* <UploadWidget
+            <UploadWidget
               ref={this.imageRef}
               onFileSelect={this.handleFileSelect}
               name="profileImg"
             >
               Change profile image
-            </UploadWidget> */}
+            </UploadWidget>
           </div>
-
-          {httpResponse &&
-            {
-              /* <FeedBack
-              message={httpResponse.message}
-              status={httpResponse.status}
-            /> */
-            }}
-
           <div className="form-group">
             <label className="label" htmlFor="username">
               Username
@@ -157,7 +148,6 @@ class FormProfile extends Component {
               <p className="input-error">Invalid input</p>
             )}
           </div>
-
           <div className="form-group">
             <label className="label" htmlFor="email">
               Email
@@ -172,24 +162,30 @@ class FormProfile extends Component {
             />
           </div>
           <div className="form-group">
-            <label className="label" htmlFor="phoneNumber">
-              Phone number
+            <label className="label" htmlFor="password">
+              Password
             </label>
             <input
               className="input"
-              id="phoneNumber"
-              type="text"
-              name="phoneNumber"
+              id="password"
+              type="password"
+              name="password"
               onChange={this.handleChange}
-              value={this.state.user.phoneNumber}
+              value={this.state.user.password}
             />
-            {!this.isValidInput("phoneNumber") && (
+            {!this.isValidInput("username") && (
               <p className="input-error">Invalid input</p>
             )}
-          </div>
-          {/* <Button primary disabled={this.checkError()}>
+          </div>{" "}
+          {httpResponse && (
+            <FeedBack
+              message={httpResponse.message}
+              status={httpResponse.status}
+            />
+          )}
+          <Button primary disabled={this.checkError()}>
             Save
-          </Button> */}
+          </Button>
         </form>
       </section>
     );

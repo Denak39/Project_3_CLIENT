@@ -44,7 +44,7 @@ export default {
       .catch(errorHandler);
   },
 
-  getUsersInfos() {
+  getUserInfos() {
     return service
       .get("/api/users/me")
       .then((res) => res.data)
