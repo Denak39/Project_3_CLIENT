@@ -64,4 +64,11 @@ export default {
       .then((res) => res.data)
       .catch(errorHandler);
   },
+
+  getAllUsers() {
+    return service
+      .get("/api/users")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
 };

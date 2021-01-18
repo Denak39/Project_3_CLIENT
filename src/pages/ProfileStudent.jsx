@@ -1,11 +1,16 @@
-/*import React from "react";
+/*import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { withUser } from "../components/Auth/withUser";
 
 
-const ProfileStudent = (props) => {
+class ProfileStudent = (props) => {
+  render() {
+    const { UserContext } = this.props;
+    const { user } = UserContext;
   return (
     <div>
       <h1>Ded-Sec | Student Space</h1>
-      <img src="" alt=""/>
+      <img src="/Project_3_CLIENT/public/skull-student.png" alt="student skull"/>
       <p>accountType:</p>
       <p>Student</p>
       <ul>
@@ -14,13 +19,16 @@ const ProfileStudent = (props) => {
       </ul>
       <hr/>
       <div>
-        <p>Userinfo:{}</p>
-        <p>Username:{username}</p>
-        <p>Email:{email}</p>
-        <p>Password:{password}</p>
+        <h3>Userinfo:</h3>
+        <p>Profile Image:{user.profileImg}</p>
+        <p>Username:{user.username}</p>
+        <p>Level:{user.level}</p>
+        <p>Email:{user.email}</p>
+        <p>Password:{user.password}</p>
       </div>
     </div>
   );
 };
+};
 
-export default ProfileStudent;*/
+export default withUser(ProfileStudent);*/
