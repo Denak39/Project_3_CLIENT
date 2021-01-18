@@ -7,8 +7,8 @@ import Signup from "./pages/Signup";
 import ProtectedRoute from "./components/ProtectedRoute";
 import ProfileMentor from "./pages/ProfileMentor";
 import ProfileStudent from "./pages/ProfileStudent";
-import Lesson from "./pages/LessonCreate";
-
+import formLesson from "./pages/LessonCreate";
+import FormProfile from "./components/Forms/FormProfile";
 function App() {
   return (
     <div className="App">
@@ -17,9 +17,22 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/signin" component={Signin} />
         <Route exact path="/signup" component={Signup} />
-        <ProtectedRoute exact path="/profile/mentor" component={ProfileMentor} />
-        <ProtectedRoute exact path="/profile/student" component={ProfileStudent} />
-        <Route exact path="/lesson/create" component={Lesson} />
+        <ProtectedRoute
+          exact
+          path="/profile/mentor"
+          component={ProfileMentor}
+        />
+        <ProtectedRoute
+          exact
+          path="/profile/student"
+          component={ProfileStudent}
+        />{" "}
+        <ProtectedRoute
+          exact
+          path="/profile/settings"
+          component={FormProfile}
+        />
+        <Route exact path="/lesson/create" component={formLesson} />
       </Switch>
     </div>
   );

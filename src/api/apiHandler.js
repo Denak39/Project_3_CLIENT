@@ -44,9 +44,16 @@ export default {
       .catch(errorHandler);
   },
 
-  getItems() {
+  getUsersInfos() {
     return service
-      .get("/api/items")
+      .get("/api/users/me")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  updateUser(data) {
+    return service
+      .patch("/api/users/me", data)
       .then((res) => res.data)
       .catch(errorHandler);
   },
