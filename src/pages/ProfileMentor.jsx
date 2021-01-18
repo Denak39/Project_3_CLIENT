@@ -1,32 +1,31 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { withUser } from "../components/Auth/withUser";
 import apiHandler from "../api/apiHandler";
 
 class ProfileMentor extends Component {
   state = {
-    users: []
-  }
+    users: [],
+  };
 
   componentDidMount() {
-    apiHandler.getAllUsers()
-    .then((apiRes) => {
+    apiHandler.getAllUsers().then((apiRes) => {
       console.log(apiRes);
-      this.setState({users : apiRes})
-
-    })
+      this.setState({ users: apiRes });
+    });
   }
   render() {
-    
-  return (
-    <div>
-    <h1>Hello</h1>
-    {this.state.users.map((user) => {
-      return(
-        <div key={user._id}><p>{user.username}</p></div>
-      ) 
-    })}
-      {/* <h1>Ded-Sec | Mentor Space</h1>
+    return (
+      <div>
+        <h1>Hello</h1>
+        {this.state.users.map((user) => {
+          return (
+            <div key={user._id}>
+              <p>{user.username}</p>
+            </div>
+          );
+        })}
+        {/* <h1>Ded-Sec | Mentor Space</h1>
       <img src="/Project_3_CLIENT/public/skull-mentor.png" alt="mentor skull"/>
       <p>Mentor privileges:</p>
       <ul>
@@ -43,9 +42,9 @@ class ProfileMentor extends Component {
         <p>Email:{user.email}</p>
         <p>Password:{user.password}</p>
       </div> */}
-    </div>
-  );
-};
-};
+      </div>
+    );
+  }
+}
 
 export default withUser(ProfileMentor);

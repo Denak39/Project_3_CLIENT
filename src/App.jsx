@@ -17,16 +17,8 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/signin" component={Signin} />
         <Route exact path="/signup" component={Signup} />
-        <ProtectedRoute
-          exact
-          path="/profile/mentor"
-          component={ProfileMentor}
-        />
-        <ProtectedRoute
-          exact
-          path="/profile/student"
-          component={ProfileStudent}
-        />{" "}
+        <ProtectedRoute exact path="/profile" component={ProfileMentor} />
+        <ProtectedRoute exact path="/profile" component={ProfileStudent} />{" "}
         <ProtectedRoute
           exact
           path="/profile/settings"
