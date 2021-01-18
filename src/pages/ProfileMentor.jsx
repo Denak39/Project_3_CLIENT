@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { withUser } from "../components/Auth/withUser";
-import apiHandler from "../api/apiHandler";
-
+//var imageMentor = require('../public/teacher.png')
+/*
 class ProfileMentor extends Component {
   state = {
     users: []
@@ -17,18 +16,24 @@ class ProfileMentor extends Component {
     })
   }
   render() {
-    
+    */
+
+    const ProfileMentor = (props) => {
+      //console.log(props.context);
+      //console.log(props.context.user.email)  
   return (
     <div>
-    <h1>Hello</h1>
-    {this.state.users.map((user) => {
-      return(
-        <div key={user._id}><p>{user.username}</p></div>
-      ) 
-    })}
-      {/* <h1>Ded-Sec | Mentor Space</h1>
-      <img src="/Project_3_CLIENT/public/skull-mentor.png" alt="mentor skull"/>
-      <p>Mentor privileges:</p>
+    {/* <h1>Hello</h1> */}
+  
+    
+    
+      <h1>Ded-Sec</h1>
+    <hr/>
+    <h1>Mentor Space</h1>
+      <div className="">
+      <img src='../public/teacher.png' alt='' />
+      </div>
+      <h3>Mentor privileges:</h3>
       <ul>
         <li>Create exchange rooms, learning material and other supports.</li>
         <li>Participate to the community as an influent speaker, be an ambassador of DedSec Webwide.</li>
@@ -36,16 +41,15 @@ class ProfileMentor extends Component {
       <hr/>
       <div>
         <h3>Userinfo:</h3>
-        <p>Profile Image:{user.profileImg}</p>
-        <p>Userinfo:{}</p>
-        <p>Username:{user.username}</p>
-        <p>Level:{user.level}</p>
-        <p>Email:{user.email}</p>
-        <p>Password:{user.password}</p>
-      </div> */}
+        <p>Username:{props.context.user.username}</p>
+        <p>Account Type: Mentor Profile</p>
+        <p>Avatar:{props.context.user.profileImg}</p>
+        <p>Email:{props.context.user.email}</p>
+      </div>
     </div>
   );
 };
-};
+
+
 
 export default withUser(ProfileMentor);

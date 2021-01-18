@@ -1,34 +1,53 @@
-/*import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
 import { withUser } from "../components/Auth/withUser";
+//import apiHandler from "../api/apiHandler";
+//var imageStudent = require('../public/student.png')
 
+/*
+class ProfileStudent extends Component {
+  state = {
+    users: []
+  }
 
-class ProfileStudent = (props) => {
+  componentDidMount() {
+    apiHandler.getAllUsers()
+    .then((apiRes) => {
+      console.log(apiRes);
+      this.setState({users : apiRes})
+
+    })
+  }
   render() {
-    const { UserContext } = this.props;
-    const { user } = UserContext;
+*/
+const ProfileStudent = (props) => {
+  //console.log(props.context);
+
   return (
     <div>
-      <h1>Ded-Sec | Student Space</h1>
-      <img src="/Project_3_CLIENT/public/skull-student.png" alt="student skull"/>
-      <p>accountType:</p>
-      <p>Student</p>
+    {/* <h1>Hello</h1> */}
+
+
+    <h1>Ded-Sec</h1>
+    <hr/>
+    <h1>Student Space</h1>
+      <div className="">
+      <img src='../public/student.png' alt='' />
+      </div>
       <ul>
-        <li>Learn new ways to protect yourself and others</li>
-        <li>Pracitice and share your skills with the community</li>
+        <li>Create exchange rooms, learning material and other supports.</li>
+        <li>Participate to the community as an influent speaker, be an ambassador of DedSec Webwide.</li>
       </ul>
       <hr/>
       <div>
         <h3>Userinfo:</h3>
-        <p>Profile Image:{user.profileImg}</p>
-        <p>Username:{user.username}</p>
-        <p>Level:{user.level}</p>
-        <p>Email:{user.email}</p>
-        <p>Password:{user.password}</p>
+        <p>Username:{props.context.user.username}</p>
+        <p>Account Type: Student Profile</p>
+        <p>Level:{props.context.user.level}</p>
+        <p>Avatar:{props.context.user.profileImg}</p>
+        <p>Email:{props.context.user.email}</p>
       </div>
     </div>
   );
 };
-};
 
-export default withUser(ProfileStudent);*/
+export default withUser(ProfileStudent);
