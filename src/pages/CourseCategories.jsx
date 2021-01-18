@@ -17,19 +17,19 @@ class CourseCategories extends React.Component {
             <p>Server | Client</p>
             <p>Cryptanalysis</p>
             <p>Cracking</p>
-            <button>Net. Path</button>
+            <a href="Net. Path"></a>
           </div>
           <div className="Keyboard Warrior">
             <p>C | UNIX | Binary</p>
             <p>GDB | x86 | Python</p>
             <p>SQL</p>
-            <button>Prog. Path</button>
+            <a href="Prog. Path"></a>
           </div>
           <div className="Social Rogue">
             <p>Social engineering</p>
             <p>Cryptology</p>
             <p>Forsenic</p>
-            <button>Hack. Path</button>
+            <a href="Hack. Path"></a>
           </div>
          </div>
         </div>

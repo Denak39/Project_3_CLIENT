@@ -40,11 +40,11 @@ const ProfileStudent = (props) => {
       <hr/>
       <div>
         <h3>Userinfo:</h3>
-        <p>Username:{props.context.user.username}</p>
+        <p>Username: {props.context.user.username}</p>
         <p>Account Type: Student Profile</p>
-        <p>Level:{props.context.user.level}</p>
-        <p>Avatar:{props.context.user.profileImg}</p>
-        <p>Email:{props.context.user.email}</p>
+        <p>Level: {props.context.user.level}</p>
+        <p>Avatar: {props.context.user.profileImg}</p>
+        <p>Email: {props.context.user.email}</p>
       </div>
     </div>
   );
