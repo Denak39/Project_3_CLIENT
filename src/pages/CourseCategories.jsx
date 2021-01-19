@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 import NavMain from "../components/NavMain";
 
 
@@ -10,26 +10,26 @@ class CourseCategories extends React.Component {
 
         <div className="App">
          <div>
-          <h1>DedSec | Course categories</h1>
+          <h1>DedSec | Course Paths</h1>
           <a href="/logout"><img src="" alt="logout-icon"/>Log out</a>
           <p>Username</p> 
           <div className="Network Warlock">
             <p>Server | Client</p>
             <p>Cryptanalysis</p>
             <p>Cracking</p>
-            <a href="Net. Path"></a>
+            <button>Network Path</button>
           </div>
           <div className="Keyboard Warrior">
             <p>C | UNIX | Binary</p>
             <p>GDB | x86 | Python</p>
             <p>SQL</p>
-            <a href="Prog. Path"></a>
+            <button>Programming Path</button>
           </div>
           <div className="Social Rogue">
             <p>Social engineering</p>
             <p>Cryptology</p>
             <p>Forsenic</p>
-            <a href="Hack. Path"></a>
+            <button>Hacking Path</button>
           </div>
          </div>
         </div>
@@ -37,3 +37,5 @@ class CourseCategories extends React.Component {
       );
     };
 };
+
+export default CourseCategories;*/

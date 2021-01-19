@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 //import { Link } from "react-router-dom";
 import { withUser } from "../components/Auth/withUser";
 
@@ -12,7 +12,7 @@ console.log("Im A Student");
       <hr/>
       <h1>Student Space</h1>
       <img src="../../public/student.png" alt="student"/>
-      <p>accountType:</p>
+      <p>accountType: {props.context.user.accountType}</p>
       <p>Student</p>
       <ul>
         <li>Learn new ways to protect yourself and others</li>

@@ -6,9 +6,13 @@ import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Profile from "./pages/Profile";
-import ProfileStudent from "./pages/ProfileStudent";
 import formLesson from "./pages/LessonCreate";
 import FormProfile from "./components/Forms/FormProfile";
+import CourseCategories from "./pages/CourseCategories";
+import NetworkPath from "./pages/NetworkPath";
+import ProgrammingPath from "./pages/ProgrammingPath";
+import HackingPath from "./pages/HackingPath";
+import NotFound from "./pages/NotFound";
 function App() {
   return (
     <div className="App">
@@ -23,7 +27,12 @@ function App() {
           path="/profile/settings"
           component={FormProfile}
         />
+        <Route exact path="/course/categories" component={CourseCategories} />
+        <Route exact path="/course/categories/network" component={NetworkPath} />
+        <Route exact path="/course/categories/programming" component={ProgrammingPath} />
+        <Route exact path="/course/categories/hacking" component={HackingPath} />
         <Route exact path="/lesson/create" component={formLesson} />
+        <Route path="*" component={NotFound} />
       </Switch>
     </div>
   );
