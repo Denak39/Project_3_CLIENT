@@ -24,7 +24,7 @@ console.log("IM in mentor");
       <div>
         <h3>Userinfo:</h3>
         <p>Username: {props.context.user.username}</p>
-        <p>Account Type: Mentor Profile</p>
+        <p>Account Type: {props.context.user.username}</p>
         <p>Avatar: {props.context.user.profileImg}</p>
         <p>Email: {props.context.user.email}</p>
       </div>
