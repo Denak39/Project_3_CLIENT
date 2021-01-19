@@ -1,8 +1,6 @@
-import React, { Component } from "react";
-// import { Link } from "react-router-dom";
+import React from "react";
 import { withUser } from "../components/Auth/withUser";
-import apiHandler from "../api/apiHandler";
-import Profile from "./Profile";
+
 
 const ProfileMentor = (props) => {
 console.log("IM in mentor");
@@ -24,7 +22,7 @@ console.log("IM in mentor");
       <div>
         <h3>Userinfo:</h3>
         <p>Username: {props.context.user.username}</p>
-        <p>Account Type: {props.context.user.username}</p>
+        <p>Account Type: {props.context.user.accountType}</p>
         <p>Avatar: {props.context.user.profileImg}</p>
         <p>Email: {props.context.user.email}</p>
       </div>
