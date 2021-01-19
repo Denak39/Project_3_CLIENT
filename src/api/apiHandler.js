@@ -78,4 +78,12 @@ export default {
       .then((res) => res.data)
       .catch(errorHandler);
   },
+
+getAllLessons() {
+  return service
+    .get("/api/lessons")
+    .then((res) => res.data)
+    .catch(errorHandler);
+},
 };
+

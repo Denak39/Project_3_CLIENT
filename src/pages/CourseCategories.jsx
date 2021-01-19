@@ -1,5 +1,6 @@
-/*import React from "react";
-import NavMain from "../components/NavMain";
+import React from "react";
+import { Link } from "react-router-dom";
+//import NavMain from "../components/NavMain";
 
 
 class CourseCategories extends React.Component {
@@ -17,19 +18,25 @@ class CourseCategories extends React.Component {
             <p>Server | Client</p>
             <p>Cryptanalysis</p>
             <p>Cracking</p>
-            <button>Network Path</button>
+            <Link className="link" exact to="/course/categories/network">
+            Network Path
+            </Link>
           </div>
           <div className="Keyboard Warrior">
             <p>C | UNIX | Binary</p>
             <p>GDB | x86 | Python</p>
             <p>SQL</p>
-            <button>Programming Path</button>
+            <Link className="link" exact to="/course/categories/programming">
+            Programming Path
+            </Link>
           </div>
           <div className="Social Rogue">
             <p>Social engineering</p>
             <p>Cryptology</p>
             <p>Forsenic</p>
-            <button>Hacking Path</button>
+            <Link className="link" exact to="/course/categories/hacking">
+            Hacking Path
+            </Link>
           </div>
          </div>
         </div>
@@ -38,4 +45,4 @@ class CourseCategories extends React.Component {
     };
 };
 
-export default CourseCategories;*/
+export default CourseCategories;

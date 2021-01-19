@@ -1,6 +1,6 @@
 import React from "react";
 import { withUser } from "../components/Auth/withUser";
-
+import teacher from "../pictures/teacher.png"
 
 const ProfileMentor = (props) => {
 console.log("IM in mentor");
@@ -12,7 +12,7 @@ console.log("IM in mentor");
       <h1>Ded-Sec</h1> 
       <hr/>
       <h1>Mentor Space</h1>
-      <img src="../../public/teacher.png" alt="mentor"/>
+      <img src={teacher} alt="teacher.png"/>
       <p>Mentor privileges:</p>
       <ul>
         <li>Create exchange rooms, learning material and other supports.</li>

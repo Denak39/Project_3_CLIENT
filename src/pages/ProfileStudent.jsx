@@ -1,7 +1,7 @@
 import React from "react";
 //import { Link } from "react-router-dom";
 import { withUser } from "../components/Auth/withUser";
-
+import student from "../pictures/student.png";
 
 const ProfileStudent = (props) => {
 
@@ -11,7 +11,7 @@ console.log("Im A Student");
       <h1>Ded-Sec</h1>
       <hr/>
       <h1>Student Space</h1>
-      <img src="../../public/student.png" alt="student"/>
+      <img src={student} alt="student.png"/>
       <p>accountType: {props.context.user.accountType}</p>
       <p>Student</p>
       <ul>
