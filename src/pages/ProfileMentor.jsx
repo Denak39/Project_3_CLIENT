@@ -3,30 +3,15 @@ import React, { Component } from "react";
 import { withUser } from "../components/Auth/withUser";
 import apiHandler from "../api/apiHandler";
 
-class ProfileMentor extends Component {
-  state = {
-    users: [],
-  };
+const ProfileMentor = (props) => {
 
-  componentDidMount() {
-    apiHandler.getAllUsers().then((apiRes) => {
-      console.log(apiRes);
-      this.setState({ users: apiRes });
-    });
-  }
-  render() {
     return (
       <div>
-        <h1>Hello</h1>
-        {this.state.users.map((user) => {
-          return (
-            <div key={user._id}>
-              <p>{user.username}</p>
-            </div>
-          );
-        })}
-        {/* <h1>Ded-Sec | Mentor Space</h1>
-      <img src="/Project_3_CLIENT/public/skull-mentor.png" alt="mentor skull"/>
+  
+      <h1>Ded-Sec</h1> 
+      <hr/>
+      <h1>Mentor Space</h1>
+      <img src="../../public/teacher.png" alt="mentor"/>
       <p>Mentor privileges:</p>
       <ul>
         <li>Create exchange rooms, learning material and other supports.</li>
@@ -35,16 +20,16 @@ class ProfileMentor extends Component {
       <hr/>
       <div>
         <h3>Userinfo:</h3>
-        <p>Profile Image:{user.profileImg}</p>
-        <p>Userinfo:{}</p>
-        <p>Username:{user.username}</p>
-        <p>Level:{user.level}</p>
-        <p>Email:{user.email}</p>
-        <p>Password:{user.password}</p>
-      </div> */}
+        <p>Username: {props.context.user.username}</p>
+        <p>Account Type: Mentor Profile</p>
+        <p>Avatar: {props.context.user.profileImg}</p>
+        <p>Email: {props.context.user.email}</p>
       </div>
-    );
-  }
-}
+      <button>Create Lesson</button>
+    </div>
+    
+  );
+};
+
 
 export default withUser(ProfileMentor);

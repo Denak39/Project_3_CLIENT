@@ -1,16 +1,16 @@
-/*import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from "react";
+//import { Link } from "react-router-dom";
 import { withUser } from "../components/Auth/withUser";
 
 
-class ProfileStudent = (props) => {
-  render() {
-    const { UserContext } = this.props;
-    const { user } = UserContext;
+const ProfileStudent = (props) => {
+
   return (
     <div>
-      <h1>Ded-Sec | Student Space</h1>
-      <img src="/Project_3_CLIENT/public/skull-student.png" alt="student skull"/>
+      <h1>Ded-Sec</h1>
+      <hr/>
+      <h1>Student Space</h1>
+      <img src="../../public/student.png" alt="student"/>
       <p>accountType:</p>
       <p>Student</p>
       <ul>
@@ -20,15 +20,14 @@ class ProfileStudent = (props) => {
       <hr/>
       <div>
         <h3>Userinfo:</h3>
-        <p>Profile Image:{user.profileImg}</p>
-        <p>Username:{user.username}</p>
-        <p>Level:{user.level}</p>
-        <p>Email:{user.email}</p>
-        <p>Password:{user.password}</p>
+        <p>Profile Image: {props.context.user.profileImg}</p>
+        <p>Username: {props.context.user.username}</p>
+        <p>Level: {props.context.user.level}</p>
+        <p>Email: {props.context.user.email}</p>
+        <p>Password: {props.context.user.password}</p>
       </div>
     </div>
   );
 };
-};
 
-export default withUser(ProfileStudent);*/
+export default withUser(ProfileStudent);
