@@ -72,15 +72,19 @@ class FormSignup extends Component {
           id="password"
           name="password"
         />
-        <label htmlFor="accountType">Role</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.password}
-          type="accountType"
-          id="accountType"
-          name="accountType"
-        />
-        <label htmlFor="profileImage">Image:</label>
+
+      <label htmlFor="accountType">Role</label>
+        <select onChange={this.handleChange}
+            value={this.state.accountType}
+            type="accountType"
+            id="accountType"
+            name="accountType">
+          <option value="" disabled selected>Select your role</option>
+          <option value="student">Student</option>
+          <option value="mentor">Mentor</option>
+        </select>
+
+        <label htmlFor="profileImage">Avatar:</label>
         <input
           onChange={this.handleChange}
           value={this.state.profileImage}
@@ -89,7 +93,7 @@ class FormSignup extends Component {
           id="image"
           alt=""
         />
-        <button>Submit</button>
+        <button>Create account!</button>
       </form>
     );
   }

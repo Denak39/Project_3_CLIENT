@@ -5,6 +5,7 @@ import { withUser } from "../components/Auth/withUser";
 
 const ProfileStudent = (props) => {
 
+console.log("Im A Student");
   return (
     <div>
       <h1>Ded-Sec</h1>
@@ -29,5 +30,6 @@ const ProfileStudent = (props) => {
     </div>
   );
 };
+
 
 export default withUser(ProfileStudent);
