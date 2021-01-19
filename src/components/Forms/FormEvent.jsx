@@ -4,9 +4,8 @@ import { withRouter } from "react-router-dom";
 import apiHandler from "../../api/apiHandler";
 // import { Redirect } from "react-router-dom";
 import ControlledEditor from "../../components/textEditor";
-import Rating from "react-rating";
 
-class FormLesson extends Component {
+class FormEvent extends Component {
   state = {
     name: "",
     category: "",
@@ -59,20 +58,9 @@ class FormLesson extends Component {
             Choose a category
           </option>
           <option value="Network">Network</option>
-          <option value="Programing">Programing</option>
+          <option value="Programming">Programming</option>
           <option value="Hacking">Hacking</option>
         </select>
-        <label htmlFor="difficulty">Select a difficulty</label>
-        <Rating
-          onChange={this.handleChange}
-          value={this.state.difficulty}
-          id="difficulty"
-          name="difficulty"
-          emptySymbol={<span className="icon-text">-</span>}
-          fullSymbol={[1, 2, 3, 4, 5].map((n) => (
-            <span className="icon-text">{n}</span>
-          ))}
-        />
         <button>Submit</button>
       </form>
     );
