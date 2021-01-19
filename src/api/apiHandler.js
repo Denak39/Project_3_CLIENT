@@ -60,7 +60,14 @@ export default {
 
   lesson(lessonInfo) {
     return service
-      .post("/api/lessons", lessonInfo)
+      .post("/api/lessons/create", lessonInfo)
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+
+  event(eventInfo) {
+    return service
+      .post("/api/events/create", eventInfo)
       .then((res) => res.data)
       .catch(errorHandler);
   },

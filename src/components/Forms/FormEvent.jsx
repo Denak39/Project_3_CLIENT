@@ -3,14 +3,17 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import apiHandler from "../../api/apiHandler";
 // import { Redirect } from "react-router-dom";
-import ControlledEditor from "../../components/textEditor";
+// import PickTime from "../../components/DateTimePicker";
+import { DateTimePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
+import DateFnsUtils from "@date-io/date-fns";
 
 class FormEvent extends Component {
   state = {
     name: "",
-    category: "",
+    category: "-1",
     link: "",
     date: "",
+    duration: "",
   };
 
   handleChange = (event) => {
@@ -22,12 +25,12 @@ class FormEvent extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    console.log(this.state);
 
     apiHandler
-      .lesson(this.state)
+      .event(this.state)
       .then((data) => {
-        this.context.setUser(data);
-        this.props.history.push("/");
+        this.props.history.push("/EventCalendar");
       })
       .catch((error) => {
         console.log(error);
@@ -57,10 +60,42 @@ class FormEvent extends Component {
           <option value="-1" disabled>
             Choose a category
           </option>
+          <option value="Hacking">Hacking</option>
           <option value="Network">Network</option>
           <option value="Programming">Programming</option>
-          <option value="Hacking">Hacking</option>
         </select>
+        <MuiPickersUtilsProvider utils={DateFnsUtils}>
+          <DateTimePicker
+            value={this.state.date}
+            onChange={(date) => this.setState({ date })}
+            id="date"
+            name="date"
+            required
+          />
+        </MuiPickersUtilsProvider>
+        {/* <PickTime
+          onChange={this.handleChange}
+          value={this.state.date}
+          name="date"
+          id="date"
+          required
+        /> */}
+        <label htmlFor="link">Link</label>
+        <input
+          onChange={this.handleChange}
+          value={this.state.link}
+          type="link"
+          id="link"
+          name="link"
+        />
+        <label htmlFor="duration">Duration</label>
+        <input
+          onChange={this.handleChange}
+          value={this.state.duration}
+          type="duration"
+          id="duration"
+          name="duration"
+        />
         <button>Submit</button>
       </form>
     );

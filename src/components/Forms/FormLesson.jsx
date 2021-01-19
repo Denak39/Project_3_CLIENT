@@ -3,13 +3,15 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import apiHandler from "../../api/apiHandler";
 // import { Redirect } from "react-router-dom";
-import ControlledEditor from "../../components/textEditor";
-import Rating from "react-rating";
+// import ControlledEditor from "../../components/textEditor";
+// import Rating from "react-rating";
+import { Editor } from "react-draft-wysiwyg";
+import "../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 
 class FormLesson extends Component {
   state = {
     name: "",
-    category: "",
+    category: "-1",
     difficulty: "",
     content: "",
   };
@@ -23,12 +25,11 @@ class FormLesson extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-
+    console.log(this.state);
     apiHandler
       .lesson(this.state)
       .then((data) => {
-        this.context.setUser(data);
-        this.props.history.push("/");
+        this.props.history.push("/profile");
       })
       .catch((error) => {
         console.log(error);
@@ -59,11 +60,11 @@ class FormLesson extends Component {
             Choose a category
           </option>
           <option value="Network">Network</option>
-          <option value="Programing">Programing</option>
+          <option value="Programming">Programing</option>
           <option value="Hacking">Hacking</option>
         </select>
         <label htmlFor="difficulty">Select a difficulty</label>
-        <Rating
+        {/* <Rating
           onChange={this.handleChange}
           value={this.state.difficulty}
           id="difficulty"
@@ -72,8 +73,8 @@ class FormLesson extends Component {
           fullSymbol={[1, 2, 3, 4, 5].map((n) => (
             <span className="icon-text">{n}</span>
           ))}
-        />
-        {/* <select
+        /> */}
+        <select
           onChange={this.handleChange}
           value={this.state.difficulty}
           name="difficulty"
@@ -87,14 +88,17 @@ class FormLesson extends Component {
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
-          <option value="5">5</option>
-        </select> */}
+        </select>
 
-        <ControlledEditor
-          onChange={this.handleChange}
+        <Editor
+          onChange={(content) => this.setState({ content })}
           value={this.state.content}
-          id="content"
           name="content"
+          id="content"
+          // editorState={editorState}
+          wrapperClassName="demo-wrapper"
+          editorClassName="demo-editor"
+          onEditorStateChange={this.onEditorStateChange}
         />
         <button>Submit</button>
       </form>
