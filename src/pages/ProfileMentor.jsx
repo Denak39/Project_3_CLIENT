@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Profile.css";
 import { withUser } from "../components/Auth/withUser";
 import teacher from "../pictures/teacher.png"
 

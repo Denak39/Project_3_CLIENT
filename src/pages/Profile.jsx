@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../styles/Profile.css";
 import { withUser } from "../components/Auth/withUser"
 const { default: ProfileStudent } = require("./ProfileStudent");
 const { default: ProfileMentor } = require("./ProfileMentor");
