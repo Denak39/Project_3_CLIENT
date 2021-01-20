@@ -1,9 +1,9 @@
 import React from "react";
 import UserContext from "../components/Auth/UserContext";
 import apiHandler from "../api/apiHandler";
+// import draftToMarkdown from "draftjs-to-markdown";
 
 class OneLessonPage extends React.Component {
-  // get all lessons from database
   static contextType = UserContext;
   state = {
     lesson: null,
@@ -24,8 +24,8 @@ class OneLessonPage extends React.Component {
     return (
       this.state.lesson && (
         <div>
-          <h1>{this.state.lesson.name}</h1>
-          <h2>{this.state.lesson.difficulty}</h2>
+          <h1>Lesson title: {this.state.lesson.name}</h1>
+          <h2>Lesson difficulty: {this.state.lesson.difficulty}</h2>
           <p>{this.state.lesson.content}</p>
         </div>
       )

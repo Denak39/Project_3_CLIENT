@@ -4,6 +4,7 @@ import UploadWidget from "../UploadWidget";
 import FeedBack from "../FeedBack";
 import apiHandler from "../../api/apiHandler";
 import UserContext from "../Auth/UserContext";
+import { Link } from "react-router-dom";
 
 // import "../../styles/form.css";
 
@@ -187,6 +188,9 @@ class FormProfile extends Component {
             Save
           </Button>
         </form>
+        <Link to={`/profile`}>
+          <button>Return to profile</button>
+        </Link>
       </section>
     );
   }
