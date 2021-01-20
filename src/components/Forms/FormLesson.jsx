@@ -22,6 +22,7 @@ class FormLesson extends Component {
     const value = event.target.value;
 
     this.setState({ [key]: value });
+    console.log(this.state.content);
   };
 
   handleSubmit = (event) => {

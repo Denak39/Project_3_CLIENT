@@ -29,34 +29,8 @@ class Home extends React.Component {
               </div>
 
               <hr className="purple-line" />
-
-<<<<<<< HEAD
-            <div className="main-right">
-              <div className="student profile">
-                <a className="icon" href="/">
-                  <i className="fas fa-book-dead"></i>
-                </a>
-                <h4 className="tracking-in-expand">accountType</h4>
-                <h4 className="tracking-in-expand">Student</h4>
-                <ul className="student-text">
-                  <li>Discover a new community</li>
-                  <li>Learn at your own pace</li>
-                </ul>
-              </div>
-              {/* <button className="join-us icon glow-button">Join us</button> */}
-              <div className="mentor">
-                <a className="icon" href="/">
-                  <i className="fas fa-skull-crossbones"></i>
-                </a>
-                <h4 className="tracking-in-expand">accountType</h4>
-                <h4 className="tracking-in-expand">Mentor</h4>
-                <ul className="mentor-text">
-                  <li>Be a part of the community</li>
-                  <li>Contribute and enhance our knowledge</li>
-                </ul>
-=======
               <div className="main-right">
-                <div className="student">
+                <div className="student profile">
                   <a className="icon" href="/">
                     <i className="fas fa-book-dead"></i>
                   </a>
@@ -67,7 +41,7 @@ class Home extends React.Component {
                     <li>Learn at your own pace</li>
                   </ul>
                 </div>
-                <button className="join-us icon glow-button">Join us</button>
+                {/* <button className="join-us icon glow-button">Join us</button> */}
                 <div className="mentor">
                   <a className="icon" href="/">
                     <i className="fas fa-skull-crossbones"></i>
@@ -79,14 +53,11 @@ class Home extends React.Component {
                     <li>Contribute and enhance our knowledge</li>
                   </ul>
                 </div>
->>>>>>> 743ff82fd447c08e2ad52805545af2cf191bd3b5
               </div>
             </section>
           </div>
         </div>
       </div>
-      // );
-      // }
     );
   }
 }

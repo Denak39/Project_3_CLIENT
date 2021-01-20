@@ -48,8 +48,6 @@ class FormSignup extends Component {
         onChange={this.handleChange}
         onSubmit={this.handleSubmit}
       >
-
-
         <label htmlFor="username">Username</label>
         <input
           onChange={this.handleChange}
@@ -58,8 +56,7 @@ class FormSignup extends Component {
           id="username"
           name="username"
           className="signup"
-          />
-
+        />
 
         <label htmlFor="email">Email</label>
         <input
@@ -71,7 +68,6 @@ class FormSignup extends Component {
           placeholer="hacker@hack.com"
           className="signup-input signup-email"
         />
-        
 
         <label htmlFor="password">Password</label>
         <input
@@ -82,42 +78,45 @@ class FormSignup extends Component {
           name="password"
           className="signup-input signup-password"
         />
-        
 
-
-      <label htmlFor="accountType">Role</label>
-        <select onChange={this.handleChange}
-            value={this.state.accountType}
-            type="accountType"
-            id="accountType"
-            name="accountType"
-            className="signup-input signup-accountType">
-          <option value="" disabled selected>Select your role</option>
+        <label htmlFor="accountType">Role</label>
+        <select
+          onChange={this.handleChange}
+          value={this.state.accountType}
+          type="accountType"
+          id="accountType"
+          name="accountType"
+          className="signup-input signup-accountType"
+        >
+          <option value="" disabled selected>
+            Select your role
+          </option>
           <option value="student">Student</option>
           <option value="mentor">Mentor</option>
         </select>
-        
-
 
         <div className="test">
-        <div>
-        <label htmlFor="profileImage" className="profileImg-label label-file">Avatar:</label>
+          <div>
+            <label
+              htmlFor="profileImage"
+              className="profileImg-label label-file"
+            >
+              Avatar:
+            </label>
+          </div>
+          <br />
+          <div className="choose-file">
+            <input
+              onChange={this.handleChange}
+              value={this.state.profileImage}
+              type="file"
+              name="image"
+              id="image"
+              alt="profileImage"
+              className="signup-input signup-profileImg input-file"
+            />
+          </div>
         </div>
-        <br/>
-        <div className="choose-file">
-        <input 
-          onChange={this.handleChange}
-          value={this.state.profileImage}
-          type="file"
-          name="image"
-          id="image"
-          alt="profileImage"
-          className="signup-input signup-profileImg input-file"
-        />
-        </div>
-        </div>
-        
-
 
         <button>Create account!</button>
       </form>

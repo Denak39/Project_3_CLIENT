@@ -20,34 +20,6 @@ class ProfileMentor extends React.Component {
       var filteredTrainerLesson = data.filter((lesson) => {
         // console.log(lesson.trainerId);
         console.log(this.props.user._id);
-
-<<<<<<< HEAD
-const ProfileMentor = (props) => {
-  console.log("IM in mentor");
-
-  return (
-    <div className="profile-body">
-      <h1>Ded-Sec</h1>
-      <hr />
-
-      <div className="mentor profile">
-      <h1>Mentor Space</h1>
-      <img className="profile-img" src={teacher} alt="teacher.png" />
-      <p>Mentor privileges:</p>
-      <ul>
-        <li>Create exchange rooms, learning material and other supports.</li>
-        <li>
-          Contribute to the community as an influent speaker, be an ambassador
-          of DedSec Webwide.
-        </li>
-      </ul>
-      </div>
-
-
-      <hr />
-
-
-=======
         if (lesson.trainerId === this.props.user._id) {
           return true;
         } else {
@@ -60,20 +32,23 @@ const ProfileMentor = (props) => {
   }
   render() {
     return (
->>>>>>> 743ff82fd447c08e2ad52805545af2cf191bd3b5
-      <div>
+      <div className="profile-body">
         <h1>Ded-Sec</h1>
         <hr />
-        <h1>Mentor Space</h1>
-        <img src={teacher} alt="teacher.png" />
-        <p>Mentor privileges:</p>
-        <ul>
-          <li>Create exchange rooms, learning material and other supports.</li>
-          <li>
-            Contribute to the community as an influent speaker, be an ambassador
-            of DedSec Webwide.
-          </li>
-        </ul>
+        <div className="mentor profile">
+          <h1>Mentor Space</h1>
+          <img className="profile-img" src={teacher} alt="teacher.png" />
+          <p>Mentor privileges:</p>
+          <ul>
+            <li>
+              Create exchange rooms, learning material and other supports.
+            </li>
+            <li>
+              Contribute to the community as an influent speaker, be an
+              ambassador of DedSec Webwide.
+            </li>
+          </ul>
+        </div>
         <hr />
         <div>
           <h3>Userinfo:</h3>
@@ -98,22 +73,9 @@ const ProfileMentor = (props) => {
             </div>
           );
         })}
-        {/* <p>{.trainerId.username}</p> */}
       </div>
-<<<<<<< HEAD
-      <Link to={`/lesson/create`}>
-        <button>Create Lesson</button>
-      </Link>
-      <h3>List of lessons you posted:</h3>
-      <p>{props.context.user.lessons}</p>
-    </div>
-
-  );
-};
-
-=======
     );
   }
 }
->>>>>>> 743ff82fd447c08e2ad52805545af2cf191bd3b5
+
 export default withUser(ProfileMentor);
