@@ -15,6 +15,8 @@ import ProgrammingPath from "./pages/ProgrammingPath";
 import EventCalendar from "./pages/EventCalendar";
 import HackingPath from "./pages/HackingPath";
 import NotFound from "./pages/NotFound";
+import OneLessonPage from "./pages/OneLessonPage";
+
 function App() {
   return (
     <div className="App">
@@ -48,6 +50,8 @@ function App() {
         <Route exact path="/lesson/create" component={formLesson} />
         <Route exact path="/event/create" component={formEvent} />
         <Route exact path="/events" component={EventCalendar} />
+        <Route exact path="/lessons/:id" component={OneLessonPage} />
+
         <Route path="*" component={NotFound} />
       </Switch>
     </div>

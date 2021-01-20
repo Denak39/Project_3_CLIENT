@@ -79,11 +79,17 @@ export default {
       .catch(errorHandler);
   },
 
-getAllLessons() {
-  return service
-    .get("/api/lessons")
-    .then((res) => res.data)
-    .catch(errorHandler);
-},
-};
+  getAllLessons() {
+    return service
+      .get("/api/lessons")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
 
+  getOneLesson() {
+    return service
+      .get("/api/lessons/:id")
+      .then((res) => res.data)
+      .catch(errorHandler);
+  },
+};

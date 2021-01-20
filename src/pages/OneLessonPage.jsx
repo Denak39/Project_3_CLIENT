@@ -1,9 +1,8 @@
 import React from "react";
 import UserContext from "../components/Auth/UserContext";
 import apiHandler from "../api/apiHandler";
-import { Link } from "react-router-dom";
 
-class HackingLessons extends React.Component {
+class OneLessonPage extends React.Component {
   // get all lessons from database
   static contextType = UserContext;
   state = {
@@ -11,7 +10,7 @@ class HackingLessons extends React.Component {
   };
 
   componentDidMount() {
-    apiHandler.getAllLessons().then((data) => {
+    apiHandler.getOneLesson().then((data) => {
       var filteredHackingLessons = data.filter((lesson) => {
         if (lesson.category === "Hacking") {
           return true;
@@ -34,11 +33,7 @@ class HackingLessons extends React.Component {
         {this.state.lessons.map((lesson) => {
           return (
             <div key={lesson._id}>
-              <Link to={`/lessons/${lesson._id}`}>
-                <h1>{lesson.name}</h1>
-              </Link>
-              <p>{lesson.trainerId.username}</p>
-              <h3>{lesson.updated_at}</h3>
+              <p>Lesson is here (name, content, difficulty</p>
             </div>
           );
         })}
@@ -47,4 +42,4 @@ class HackingLessons extends React.Component {
   }
 }
 
-export default HackingLessons;
+export default OneLessonPage;
