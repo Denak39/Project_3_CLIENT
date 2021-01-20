@@ -1,15 +1,13 @@
 import React, { Component } from "react";
-import { EditorState } from "draft-js";
+import { EditorState, convertToRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
-import "../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import draftToHtml from "draftjs-to-html";
+import htmlToDraft from "html-to-draftjs";
 
-class ControlledEditor extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      editorState: EditorState.createEmpty(),
-    };
-  }
+class EditorConvertToHTML extends Component {
+  state = {
+    editorState: EditorState.createEmpty(),
+  };
 
   onEditorStateChange: Function = (editorState) => {
     this.setState({
@@ -20,14 +18,20 @@ class ControlledEditor extends Component {
   render() {
     const { editorState } = this.state;
     return (
-      <Editor
-        editorState={editorState}
-        wrapperClassName="demo-wrapper"
-        editorClassName="demo-editor"
-        onEditorStateChange={this.onEditorStateChange}
-      />
+      <div>
+        <Editor
+          editorState={editorState}
+          wrapperClassName="demo-wrapper"
+          editorClassName="demo-editor"
+          onEditorStateChange={this.onEditorStateChange}
+        />
+        <textarea
+          disabled
+          hidden
+          value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
+        />
+      </div>
     );
   }
 }
-
-export default ControlledEditor;
+export default EditorConvertToHTML;

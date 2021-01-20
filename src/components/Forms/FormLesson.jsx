@@ -5,8 +5,9 @@ import apiHandler from "../../api/apiHandler";
 // import { Redirect } from "react-router-dom";
 // import ControlledEditor from "../../components/textEditor";
 // import Rating from "react-rating";
-import { Editor } from "react-draft-wysiwyg";
+// import { Editor } from "react-draft-wysiwyg";
 import "../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import EditorConvertToHTML from "../../components/textEditor";
 
 class FormLesson extends Component {
   state = {
@@ -90,15 +91,11 @@ class FormLesson extends Component {
           <option value="4">4</option>
         </select>
 
-        <Editor
+        <EditorConvertToHTML
           onChange={(content) => this.setState({ content })}
           value={this.state.content}
           name="content"
           id="content"
-          // editorState={editorState}
-          wrapperClassName="demo-wrapper"
-          editorClassName="demo-editor"
-          onEditorStateChange={this.onEditorStateChange}
         />
         <button>Submit</button>
       </form>
