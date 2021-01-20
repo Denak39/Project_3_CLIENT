@@ -32,7 +32,7 @@ const NavMain = (props) => {
                 {context.user && context.user.email}
               </NavLink>
             </li>
-            <li>
+            <li className="nav-logout">
               <p onClick={handleLogout}>Logout</p>
             </li>
           </React.Fragment>

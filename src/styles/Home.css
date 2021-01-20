@@ -140,7 +140,7 @@ hr {
 }
 /* */
 .main-left, .main-right {
- font-size: 16px;
+ font-size: 20px;
  width: 100%;
 }
 .main-left {
@@ -250,6 +250,7 @@ hr {
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
   }
   /* No background button */
+  /*
   .join-us {
     margin-left: 100%;
     width: 30%;
@@ -266,11 +267,11 @@ hr {
     }
     .join-us:hover {
       cursor: pointer; /* The hand appears when hovering over */
-    }
+    /*}
     /* Glow when hovering over the button (class="glow-button" (Add to html for glowing button :))*/
-    .glow-button:hover {
+    /*.glow-button:hover {
       color: rgba(255, 255, 255, 1);
       /*box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);*/
-      box-shadow: 0px 5px 15px white;
+      /*box-shadow: 0px 5px 15px white;
     }
     /* */

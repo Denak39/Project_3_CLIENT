@@ -12,7 +12,7 @@ const ProfileMentor = (props) => {
       <h1>Ded-Sec</h1>
       <hr />
 
-      <div className="profile">
+      <div className="mentor profile">
       <h1>Mentor Space</h1>
       <img className="profile-img" src={teacher} alt="teacher.png" />
       <p>Mentor privileges:</p>
@@ -25,7 +25,10 @@ const ProfileMentor = (props) => {
       </ul>
       </div>
 
+
       <hr />
+
+
       <div>
         <h3>Userinfo:</h3>
         <p>Username: {props.context.user.username}</p>
@@ -39,6 +42,7 @@ const ProfileMentor = (props) => {
       <h3>List of lessons you posted:</h3>
       <p>{props.context.user.lessons}</p>
     </div>
+
   );
 };
 

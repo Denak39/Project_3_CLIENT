@@ -3,6 +3,7 @@ import { withRouter } from "react-router-dom";
 import UserContext from "../Auth/UserContext";
 import apiHandler from "../../api/apiHandler";
 import { Redirect } from "react-router-dom";
+import FormSignupStyle from "../../styles/FormSignupStyle.css";
 
 class FormSignup extends Component {
   static contextType = UserContext;
@@ -47,6 +48,8 @@ class FormSignup extends Component {
         onChange={this.handleChange}
         onSubmit={this.handleSubmit}
       >
+
+
         <label htmlFor="username">Username</label>
         <input
           onChange={this.handleChange}
@@ -54,7 +57,10 @@ class FormSignup extends Component {
           type="text"
           id="username"
           name="username"
-        />
+          className="signup"
+          />
+
+
         <label htmlFor="email">Email</label>
         <input
           onChange={this.handleChange}
@@ -63,7 +69,10 @@ class FormSignup extends Component {
           id="email"
           name="email"
           placeholer="hacker@hack.com"
+          className="signup-input signup-email"
         />
+        
+
         <label htmlFor="password">Password</label>
         <input
           onChange={this.handleChange}
@@ -71,28 +80,45 @@ class FormSignup extends Component {
           type="password"
           id="password"
           name="password"
+          className="signup-input signup-password"
         />
+        
+
 
       <label htmlFor="accountType">Role</label>
         <select onChange={this.handleChange}
             value={this.state.accountType}
             type="accountType"
             id="accountType"
-            name="accountType">
+            name="accountType"
+            className="signup-input signup-accountType">
           <option value="" disabled selected>Select your role</option>
           <option value="student">Student</option>
           <option value="mentor">Mentor</option>
         </select>
+        
 
-        <label htmlFor="profileImage">Avatar:</label>
-        <input
+
+        <div className="test">
+        <div>
+        <label htmlFor="profileImage" className="profileImg-label label-file">Avatar:</label>
+        </div>
+        <br/>
+        <div className="choose-file">
+        <input 
           onChange={this.handleChange}
           value={this.state.profileImage}
           type="file"
           name="image"
           id="image"
-          alt=""
+          alt="profileImage"
+          className="signup-input signup-profileImg input-file"
         />
+        </div>
+        </div>
+        
+
+
         <button>Create account!</button>
       </form>
     );

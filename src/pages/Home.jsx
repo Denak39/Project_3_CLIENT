@@ -40,7 +40,7 @@ class Home extends React.Component {
                   <li>Learn at your own pace</li>
                 </ul>
               </div>
-              <button className="join-us icon glow-button">Join us</button>
+              {/* <button className="join-us icon glow-button">Join us</button> */}
               <div className="mentor">
                 <a className="icon" href="/">
                   <i className="fas fa-skull-crossbones"></i>
