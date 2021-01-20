@@ -1,10 +1,12 @@
 import React from "react";
 import "../styles/Home.css";
 import logoDedSec from "../pictures/logo_dedsec_white.png"
+//import background from "../pictures/background.jpg";
 
 class Home extends React.Component {
   render() {
     return (
+      <div style={{ backgroundImage: "url(../pictures/background.jpg)" }}>
       <div className="tracking-in-expand">
         <div>
           <section className="section-main">
@@ -54,8 +56,14 @@ class Home extends React.Component {
           </section>
         </div>
       </div>
+      </div>
+      // );
+     // }
     );
+    
   }
+  
 }
+
 
 export default Home;
