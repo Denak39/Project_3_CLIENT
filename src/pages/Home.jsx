@@ -1,17 +1,19 @@
 import React from "react";
 import "../styles/Home.css";
 import logoDedSec from "../pictures/logo_dedsec_white.png"
+//import background from "../pictures/background.jpg";
 
 class Home extends React.Component {
   render() {
     return (
+      <div style={{ backgroundImage: "url(../pictures/background.jpg)" }}>
       <div className="tracking-in-expand">
         <div>
           <section className="section-main">
             <div className="main-left">
               <div className="who">
                 <h1 className="tracking-in-expand">Who are we?</h1>
-                <img src={logoDedSec} alt="Ded-Sec Logo"/>
+                <img class="logoDedSec" src={logoDedSec} alt="Ded-Sec Logo"/>
               </div>
               <div className="main-intro">
                 <p className="slogan">Learn, teach, share, protect</p>
@@ -54,8 +56,14 @@ class Home extends React.Component {
           </section>
         </div>
       </div>
+      </div>
+      // );
+     // }
     );
+    
   }
+  
 }
+
 
 export default Home;
