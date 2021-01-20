@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&display=swap');
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 25%;
+    margin-left: 200%;
+}
+
+.signup-input {
+    margin: 2%;
+}
+
+.test {
+    display: block;
+    text-align: center;
+}
+
+
+
+

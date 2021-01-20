@@ -40,7 +40,7 @@ class FormSignin extends Component {
     }
 
     return (
-      <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
+      <form className="form" onChange={this.handleChange} onSubmit={this.handleSubmit}>
         <label htmlFor="email">Email</label>
         <input
           onChange={this.handleChange}
@@ -51,7 +51,7 @@ class FormSignin extends Component {
         />
         <label htmlFor="password">Password</label>
         <input type="password" id="password" name="password" />
-        <button>Submit</button>
+        <button className="btn-submit">Submit</button>
       </form>
     );
   }
