@@ -7,12 +7,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: rgb(20, 20, 20);
     display: flex;
     color: white;
 }
- .section-main {
+
+
+
+.section-main {
     justify-content: center;
     align-items: center;
     text-align: left;
