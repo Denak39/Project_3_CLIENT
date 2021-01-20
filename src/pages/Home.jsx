@@ -13,7 +13,7 @@ class Home extends React.Component {
             <div className="main-left">
               <div className="who">
                 <h1 className="tracking-in-expand">Who are we?</h1>
-                <img src={logoDedSec} alt="Ded-Sec Logo"/>
+                <img class="logoDedSec" src={logoDedSec} alt="Ded-Sec Logo"/>
               </div>
               <div className="main-intro">
                 <p className="slogan">Learn, teach, share, protect</p>
