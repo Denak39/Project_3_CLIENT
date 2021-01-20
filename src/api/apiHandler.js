@@ -86,9 +86,9 @@ export default {
       .catch(errorHandler);
   },
 
-  getOneLesson() {
+  getOneLesson(lessonId) {
     return service
-      .get("/api/lessons/:id")
+      .get(`/api/lessons/${lessonId}`)
       .then((res) => res.data)
       .catch(errorHandler);
   },
