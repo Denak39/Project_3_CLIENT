@@ -8,11 +8,13 @@ const ProfileMentor = (props) => {
   console.log("IM in mentor");
 
   return (
-    <div>
+    <div className="profile-body">
       <h1>Ded-Sec</h1>
       <hr />
+
+      <div className="profile">
       <h1>Mentor Space</h1>
-      <img src={teacher} alt="teacher.png" />
+      <img className="profile-img" src={teacher} alt="teacher.png" />
       <p>Mentor privileges:</p>
       <ul>
         <li>Create exchange rooms, learning material and other supports.</li>
@@ -21,6 +23,8 @@ const ProfileMentor = (props) => {
           of DedSec Webwide.
         </li>
       </ul>
+      </div>
+
       <hr />
       <div>
         <h3>Userinfo:</h3>

@@ -29,7 +29,7 @@ class Home extends React.Component {
             <hr className="purple-line" />
 
             <div className="main-right">
-              <div className="student">
+              <div className="student profile">
                 <a className="icon" href="/">
                   <i className="fas fa-book-dead"></i>
                 </a>
