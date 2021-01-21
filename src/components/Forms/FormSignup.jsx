@@ -3,7 +3,7 @@ import { withRouter } from "react-router-dom";
 import UserContext from "../Auth/UserContext";
 import apiHandler from "../../api/apiHandler";
 import { Redirect } from "react-router-dom";
-//import FormSignupStyle from "../../styles/FormSignupStyle.css";
+import FormSignupStyle from "../../styles/FormSignupStyle.css";
 
 
 class FormSignup extends Component {
@@ -122,7 +122,8 @@ class FormSignup extends Component {
         </div>
 
 
-        <button>Create account!</button>
+        <button className="create-account-btn">Create account!</button>
+
       </form>
     );
   }
