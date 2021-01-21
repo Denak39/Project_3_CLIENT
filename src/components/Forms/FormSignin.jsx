@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import UserContext from "../Auth/UserContext.jsx";
 import { withRouter } from "react-router-dom";
 import apiHandler from "../../api/apiHandler";
-import { Redirect } from "react-router-dom";
+import FormSignupStyle from "../../styles/FormSignupStyle.css";
+import FormSigninStyle from "../../styles/FormSigninStyle.css";
 
 class FormSignin extends Component {
   static contextType = UserContext;
@@ -35,12 +36,14 @@ class FormSignin extends Component {
   };
 
   render() {
-    if (this.context.user) {
-      return <Redirect to="/" />;
-    }
+    // if (this.context.user) {
+    //   return <Redirect to="/" />;
+    // }
 
     return (
-      <form className="form" onChange={this.handleChange} onSubmit={this.handleSubmit}>
+      <div className="formsignup-div">
+      <form className="form signin" onChange={this.handleChange} onSubmit={this.handleSubmit}>
+      <div className="form-div">
         <label htmlFor="email">Email</label>
         <input
           onChange={this.handleChange}
@@ -48,11 +51,18 @@ class FormSignin extends Component {
           type="email"
           id="email"
           name="email"
+          className="signup-input"
         />
+        </div>
+
+        <div className="form-div">
         <label htmlFor="password">Password</label>
-        <input type="password" id="password" name="password" />
-        <button className="btn-submit">Submit</button>
+        <input type="password" id="password" name="password" className="signup-input" />
+        </div>
+
+        <button className="btn-submit btn-transparent">Submit</button>
       </form>
+      </div>
     );
   }
 }

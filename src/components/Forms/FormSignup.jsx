@@ -5,7 +5,6 @@ import apiHandler from "../../api/apiHandler";
 import { Redirect } from "react-router-dom";
 import FormSignupStyle from "../../styles/FormSignupStyle.css";
 
-
 class FormSignup extends Component {
   static contextType = UserContext;
 
@@ -50,6 +49,8 @@ class FormSignup extends Component {
         onChange={this.handleChange}
         onSubmit={this.handleSubmit}
       >
+
+        <div className="form-div">
         <label htmlFor="username">Username</label>
         <input
           onChange={this.handleChange}
@@ -57,9 +58,12 @@ class FormSignup extends Component {
           type="text"
           id="username"
           name="username"
-          className="signup"
+          className="signup signup-input"
         />
+        </div>
 
+
+        <div className="form-div">
         <label htmlFor="email">Email</label>
         <input
           onChange={this.handleChange}
@@ -70,7 +74,11 @@ class FormSignup extends Component {
           placeholer="hacker@hack.com"
           className="signup-input signup-email"
         />
+        </div>
+      
 
+
+        <div className="form-div">
         <label htmlFor="password">Password</label>
         <input
           onChange={this.handleChange}
@@ -80,7 +88,10 @@ class FormSignup extends Component {
           name="password"
           className="signup-input signup-password"
         />
+        </div>
 
+
+        <div className="form-div">
         <label htmlFor="accountType">Role</label>
         <select
           onChange={this.handleChange}
@@ -96,9 +107,10 @@ class FormSignup extends Component {
           <option value="student">Student</option>
           <option value="mentor">Mentor</option>
         </select>
+        </div>
 
              
-        <div className="test">
+        <div className="pic-upload form-div">
           <div>
             <label
               htmlFor="profileImage"
@@ -113,16 +125,17 @@ class FormSignup extends Component {
               onChange={this.handleChange}
               value={this.state.profileImage}
               type="file"
-              name="image"
+              name="profileImage"
               id="image"
               alt="profileImage"
-              className="signup-input signup-profileImg input-file"
+              className="signup-profileImg input-file"
             />
           </div>
         </div>
 
 
-        <button className="create-account-btn">Create account!</button>
+        <button className="btn-transparent">Create account!</button>
+
 
       </form>
     );
