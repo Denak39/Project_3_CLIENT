@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import { UserContext } from "../Auth/UserContext";
 import { withRouter } from "react-router-dom";
 import apiHandler from "../../api/apiHandler";
+import { EditorState, convertToRaw, Editor } from "draft-js";
 // import { Redirect } from "react-router-dom";
 // import ControlledEditor from "../../components/textEditor";
 // import Rating from "react-rating";
@@ -14,7 +15,7 @@ class FormLesson extends Component {
     name: "",
     category: "-1",
     difficulty: "",
-    content: "",
+    content: EditorState.createEmpty(),
   };
 
   handleChange = (event) => {
@@ -28,8 +29,12 @@ class FormLesson extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     console.log(this.state);
+
+    const { content, ...rest } = this.state;
+    rest.content = convertToRaw(content.getCurrentContent());
+
     apiHandler
-      .lesson(this.state)
+      .lesson(rest)
       .then((data) => {
         this.props.history.push("/profile");
       })

@@ -20,16 +20,20 @@ class EditorConvertToHTML extends Component {
     return (
       <div>
         <Editor
-          editorState={editorState}
+          editorState={this.props.value}
           wrapperClassName="demo-wrapper"
           editorClassName="demo-editor"
-          onEditorStateChange={this.onEditorStateChange}
+          onEditorStateChange={this.props.onChange}
         />
         <textarea
           disabled
-          hidden
-          value={draftToHtml(convertToRaw(editorState.getCurrentContent()))}
+          value={draftToHtml(convertToRaw(this.props.value.getCurrentContent()))}
         />
+        <div
+          dangerouslySetInnerHTML={{
+            __html: draftToHtml(convertToRaw(this.props.value.getCurrentContent())),
+          }}
+        ></div>
       </div>
     );
   }
