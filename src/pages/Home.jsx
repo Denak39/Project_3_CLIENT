@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/Home.css";
 import logoDedSec from "../pictures/logo_dedsec_white.png";
+import "../styles/NavMain.css";
 //import background from "../pictures/background.jpg";
 
 class Home extends React.Component {
