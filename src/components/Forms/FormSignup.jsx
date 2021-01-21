@@ -3,7 +3,9 @@ import { withRouter } from "react-router-dom";
 import UserContext from "../Auth/UserContext";
 import apiHandler from "../../api/apiHandler";
 import { Redirect } from "react-router-dom";
+import ImgUpload from "../FileUpload";
 import FormSignupStyle from "../../styles/FormSignupStyle.css";
+
 
 class FormSignup extends Component {
   static contextType = UserContext;
@@ -40,6 +42,7 @@ class FormSignup extends Component {
     if (this.context.user) {
       return <Redirect to="/" />;
     }
+
 
     return (
       <form
@@ -95,6 +98,7 @@ class FormSignup extends Component {
           <option value="mentor">Mentor</option>
         </select>
 
+             
         <div className="test">
           <div>
             <label
@@ -117,6 +121,7 @@ class FormSignup extends Component {
             />
           </div>
         </div>
+
 
         <button>Create account!</button>
       </form>
