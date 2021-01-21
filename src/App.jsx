@@ -31,7 +31,11 @@ function App() {
           path="/profile/settings"
           component={FormProfile}
         />
-        <Route exact path="/course/categories" component={CourseCategories} />
+        <ProtectedRoute
+          exact
+          path="/course/categories"
+          component={CourseCategories}
+        />
         <Route
           exact
           path="/course/categories/network"

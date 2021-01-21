@@ -2,23 +2,23 @@ import React from "react";
 //import { Link } from "react-router-dom";
 import { withUser } from "../components/Auth/withUser";
 import student from "../pictures/student.png";
+import { Link } from "react-router-dom";
 
 const ProfileStudent = (props) => {
-
-console.log("Im A Student");
+  console.log("Im A Student");
   return (
     <div>
       <h1>Ded-Sec</h1>
-      <hr/>
+      <hr />
       <h1>Student Space</h1>
-      <img src={student} alt="student.png"/>
+      <img src={student} alt="student.png" />
       <p>accountType: {props.context.user.accountType}</p>
       <p>Student</p>
       <ul>
         <li>Learn new ways to protect yourself and others</li>
         <li>Pracitice and share your skills with the community</li>
       </ul>
-      <hr/>
+      <hr />
       <div>
         <h3>Userinfo:</h3>
         <p>Profile Image: {props.context.user.profileImg}</p>
@@ -27,9 +27,11 @@ console.log("Im A Student");
         <p>Email: {props.context.user.email}</p>
         <p>Password: {props.context.user.password}</p>
       </div>
+      <Link to={`/profile/settings`}>
+        <button>Edit profile</button>
+      </Link>
     </div>
   );
 };
-
 
 export default withUser(ProfileStudent);

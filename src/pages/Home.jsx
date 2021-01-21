@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Home.css";
 import logoDedSec from "../pictures/logo_dedsec_white.png";
 //import background from "../pictures/background.jpg";
+import { Link } from "react-router-dom";
 
 class Home extends React.Component {
   render() {
@@ -53,6 +54,11 @@ class Home extends React.Component {
                     <li>Contribute and enhance our knowledge</li>
                   </ul>
                 </div>
+              </div>
+              <div>
+                <Link exact to="/course/categories">
+                  <button>Go check our courses!</button>
+                </Link>
               </div>
             </section>
           </div>
