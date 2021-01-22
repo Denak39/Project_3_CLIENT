@@ -15,7 +15,7 @@ class FormLesson extends Component {
   state = {
     name: "",
     category: "-1",
-    difficulty: "",
+    difficulty: "-1",
     content: EditorState.createEmpty(),
   };
 
