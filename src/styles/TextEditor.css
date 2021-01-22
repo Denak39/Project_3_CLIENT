@@ -1,0 +1,21 @@
+.wrapper-class {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: hsl(0, 0%, 100%);
+    /* border: 2px solid rgb(255, 255, 255); */
+    border-radius: 0.25em;
+    color: black;
+}
+
+.editor-class {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 0.25em;
+    line-height: 0.2rem;
+    min-height: 350px;
+}
+
+.toolbar-class {
+    border-bottom: 2px solid rgb(196, 196, 196);
+    border-top: 2px solid rgb(196, 196, 196);
+    border-radius: 0.25em;
+}

@@ -116,7 +116,7 @@ class FormLesson extends Component {
           name="content"
           id="content"
         />
-        <button>Submit</button>
+        <button className="btn-transparent">Submit</button>
       </form>
     );
   }

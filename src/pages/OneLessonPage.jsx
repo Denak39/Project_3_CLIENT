@@ -31,7 +31,7 @@ class OneLessonPage extends React.Component {
       this.state.lesson && (
         <div className="oneLesson-div">
           <h1 className="lesson-title">{this.state.lesson.name}</h1>
-          <h2>Lesson difficulty: {this.state.lesson.difficulty}</h2>
+          <h2 className="lesson-difficulty">Lesson difficulty: {this.state.lesson.difficulty}</h2>
           {/* <p>{this.state.lesson}</p> */}
           <div
           className="lesson-content"

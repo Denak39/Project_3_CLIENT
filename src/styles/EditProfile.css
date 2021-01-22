@@ -1,0 +1,18 @@
+.edit-profile-form {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.img-upload-edit {
+   margin-left: 5em;
+}
+
+.form-group {
+    margin: 5px;
+}
+
+.edit-btn {
+    margin-bottom: 10px;
+}

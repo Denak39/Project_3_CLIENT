@@ -3,6 +3,7 @@ import { EditorState, convertToRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 import draftToHtml from "draftjs-to-html";
 import htmlToDraft from "html-to-draftjs";
+import "../styles/TextEditor.css";
 
 class EditorConvertToHTML extends Component {
   state = {
@@ -24,6 +25,9 @@ class EditorConvertToHTML extends Component {
           wrapperClassName="wrapper-class"
           editorClassName="editor-class"
           toolbarClassName="toolbar-class"
+          // wrapperStyle={<wrapperStyleObject />}
+          // editorStyle={<editorStyleObject />}
+          // toolbarStyle={<toolbarStyleObject />}
           onEditorStateChange={this.props.onChange}
         />
         <textarea

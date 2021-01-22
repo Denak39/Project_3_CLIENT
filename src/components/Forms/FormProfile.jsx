@@ -5,6 +5,8 @@ import FeedBack from "../FeedBack";
 import apiHandler from "../../api/apiHandler";
 import UserContext from "../Auth/UserContext";
 import { Link } from "react-router-dom";
+import "../../styles/EditProfile.css";
+import "../../styles/FormSignupStyle.css";
 
 // import "../../styles/form.css";
 
@@ -115,7 +117,7 @@ class FormProfile extends Component {
     if (this.state.isLoading) return <div>Loading...</div>;
 
     return (
-      <section className="form-section">
+      <section className="form-section edit-profile-form">
         <form autoComplete="off" className="form" onSubmit={this.handleSubmit}>
           <h1 className="header">Edit profile</h1>
           <div className="round-image user-image">
@@ -124,15 +126,17 @@ class FormProfile extends Component {
               alt={this.state.user.username}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group img-upload-edit">
             <UploadWidget
               ref={this.imageRef}
               onFileSelect={this.handleFileSelect}
               name="profileImg"
             >
-              Change profile image
-            </UploadWidget>
+              Change profile image 
+             </UploadWidget>
           </div>
+
+
           <div className="form-group">
             <label className="label" htmlFor="username">
               Username
@@ -144,11 +148,15 @@ class FormProfile extends Component {
               name="username"
               onChange={this.handleChange}
               value={this.state.user.username}
+              className="signup signup-input"
             />
+
             {!this.isValidInput("username") && (
               <p className="input-error">Invalid input</p>
             )}
           </div>
+
+
           <div className="form-group">
             <label className="label" htmlFor="email">
               Email
@@ -160,8 +168,11 @@ class FormProfile extends Component {
               name="email"
               value={this.state.user.email}
               disabled
+             className="ignup signup-input"
             />
           </div>
+
+
           <div className="form-group">
             <label className="label" htmlFor="password">
               Password
@@ -173,6 +184,7 @@ class FormProfile extends Component {
               name="password"
               onChange={this.handleChange}
               value={this.state.user.password}
+              className="ignup signup-input"
             />
             {!this.isValidInput("username") && (
               <p className="input-error">Invalid input</p>
@@ -184,12 +196,14 @@ class FormProfile extends Component {
               status={httpResponse.status}
             />
           )}
-          <Button primary disabled={this.checkError()}>
+
+
+          <Button primary disabled={this.checkError()} className="btn-transparent edit-btn">
             Save
           </Button>
         </form>
         <Link to={`/profile`}>
-          <button>Return to profile</button>
+          <button className="btn-transparent edit-btn">Return to profile</button>
         </Link>
       </section>
     );
