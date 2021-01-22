@@ -21,17 +21,24 @@ class EditorConvertToHTML extends Component {
       <div>
         <Editor
           editorState={this.props.value}
-          wrapperClassName="demo-wrapper"
-          editorClassName="demo-editor"
+          wrapperClassName="wrapper-class"
+          editorClassName="editor-class"
+          toolbarClassName="toolbar-class"
           onEditorStateChange={this.props.onChange}
         />
         <textarea
           disabled
-          value={draftToHtml(convertToRaw(this.props.value.getCurrentContent()))}
+          hidden
+          value={draftToHtml(
+            convertToRaw(this.props.value.getCurrentContent())
+          )}
         />
         <div
+          hidden
           dangerouslySetInnerHTML={{
-            __html: draftToHtml(convertToRaw(this.props.value.getCurrentContent())),
+            __html: draftToHtml(
+              convertToRaw(this.props.value.getCurrentContent())
+            ),
           }}
         ></div>
       </div>
