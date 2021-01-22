@@ -104,8 +104,8 @@ class FormSignup extends Component {
           <option value="" disabled selected>
             Select your role
           </option>
-          <option value="student">Student</option>
-          <option value="mentor">Mentor</option>
+          <option value="Student">Student</option>
+          <option value="Trainer">Trainer</option>
         </select>
         </div>
 

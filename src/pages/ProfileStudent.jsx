@@ -7,32 +7,52 @@ import { Link } from "react-router-dom";
 const ProfileStudent = (props) => {
   console.log("Im A Student");
   return (
-    <div>
-      <h1>Ded-Sec</h1>
-      <hr />
-      <h1>Student Space</h1>
+    <div className="profile-body tracking-in-expand left-profile">
+      <h1 className="space-title">Student Space</h1>
+      
+      <div >
+        <section className="section-main">
+              {/* <div className="main-left"> */}
+        <div className="mentor profile main-left left-profile-div">
       {/* <img src={student} alt="student.png" /> */}
       <i className="fas fa-user-graduate"></i>
-      <p>accountType: {props.context.user.accountType}</p>
-      <p>Student</p>
-      <ul>
+      <h1 className="space-title">accountType: {props.context.user.accountType}</h1>
+      <ul className="mentor-text space-text">
         <li>Learn new ways to protect yourself and others</li>
         <li>Pracitice and share your skills with the community</li>
       </ul>
-      <hr />
-      <div>
+      </div>
+
+      <hr className="purple-line"/>
+
+      <div className="main-right right-profile">
+      <div className="mentor profile-userinfo">
         <h3>Userinfo:</h3>
-        <p>Profile Image: {props.context.user.profileImg}</p>
-        <p>Username: {props.context.user.username}</p>
-        <p>Level: {props.context.user.level}</p>
-        <p>Email: {props.context.user.email}</p>
-        <p>Password: {props.context.user.password}</p>
+        <div className="userinfo-divs">
+        <h5>Avatar: <img className="avatar-img" src={props.context.user.profileImg} alt="" /></h5>
+        </div>
+        <div className="userinfo-divs">
+        <h5>Username: <p>{props.context.user.username}</p></h5>
+        </div>
+        <div className="userinfo-divs">
+        <h5>Level: <p>{props.context.user.level}</p></h5>
+        </div>
+        <div className="userinfo-divs">
+        <h5>Email: <p>{props.context.user.email}</p></h5>
+        </div>
+        {/* <div className="userinfo-divs">
+        <h5>Password: <p>{props.context.user.password}</p></h5>
+        </div> */}
       </div>
       <Link to={`/profile/settings`}>
-        <button>Edit profile</button>
+        <button className="btn-transparent">Edit profile</button>
       </Link>
     </div>
+    </section>
+    </div>
+      </div>
   );
 };
+
 
 export default withUser(ProfileStudent);

@@ -130,7 +130,7 @@ body {
     height: auto;
 }
 /* Vertical hr */
-hr {
+.purple-line {
     border:         none;
     /*border-left:    1px solid hsla(200, 10%, 50%,100);*/
     border-left:    1px solid white;

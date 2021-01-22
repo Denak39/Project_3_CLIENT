@@ -2,6 +2,8 @@ import React from "react";
 import UserContext from "../components/Auth/UserContext";
 import apiHandler from "../api/apiHandler";
 import { Link } from "react-router-dom";
+import "../styles/Path.css";
+import logoDedSec from "../pictures/logo_dedsec_white.png";
 
 class NetworkLessons extends React.Component {
   // get all lessons from database
@@ -33,12 +35,19 @@ class NetworkLessons extends React.Component {
       <div>
         {this.state.lessons.map((lesson) => {
           return (
-            <div key={lesson._id}>
-              <Link to={`/lessons/${lesson._id}`}>
+            <div className="box">
+            <div className="banner">
+            <div className="p" key={lesson._id}>
+               <Link to={`/lessons/${lesson._id}`}>
                 <h1>Lesson title: {lesson.name}</h1>
               </Link>
               <h2>posted by: {lesson.trainerId.username}</h2>
+              {/* <hr className="path-hr"/>  */}
             </div>
+            </div>
+            <img className="logoDedSec" src={logoDedSec} alt="Ded-Sec Logo" />
+            </div>
+           
           );
         })}
       </div>
