@@ -1,0 +1,13 @@
+.form-lesson {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    flex-direction: column;
+}
+
+.form-lesson-parent-div {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 10px;
+}

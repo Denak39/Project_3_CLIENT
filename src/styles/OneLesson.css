@@ -1,9 +1,23 @@
 .oneLesson-div {
    display: flex;
+   flex-direction: column;
 }
 
 .lesson-title {
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
+
+.lesson-content {
+    border: 1px solid white;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+

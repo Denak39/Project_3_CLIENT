@@ -9,6 +9,7 @@ import { EditorState, convertToRaw, Editor } from "draft-js";
 // import { Editor } from "react-draft-wysiwyg";
 import "../../../node_modules/react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import EditorConvertToHTML from "../../components/textEditor";
+import "../../styles/FormLessonStyles.css";
 
 class FormLesson extends Component {
   state = {
@@ -46,7 +47,10 @@ class FormLesson extends Component {
 
   render() {
     return (
-      <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
+      <form class="form-lesson" onChange={this.handleChange} onSubmit={this.handleSubmit}>
+
+        <div className="form-lesson-parent-div">
+        <div className="form-lesson-divs">
         <label htmlFor="name">Name</label>
         <input
           onChange={this.handleChange}
@@ -55,6 +59,9 @@ class FormLesson extends Component {
           id="name"
           name="name"
         />
+        </div>
+
+        <div className="form-lesson-divs">
         <label htmlFor="category">Main category</label>
         <select
           onChange={this.handleChange}
@@ -70,6 +77,10 @@ class FormLesson extends Component {
           <option value="Programming">Programing</option>
           <option value="Hacking">Hacking</option>
         </select>
+        </div>
+
+
+        <div className="form-lesson-divs">
         <label htmlFor="difficulty">Select a difficulty</label>
         {/* <Rating
           onChange={this.handleChange}
@@ -96,6 +107,8 @@ class FormLesson extends Component {
           <option value="3">3</option>
           <option value="4">4</option>
         </select>
+        </div>
+        </div>
 
         <EditorConvertToHTML
           onChange={(content) => this.setState({ content })}

@@ -41,7 +41,7 @@ const CourseCategories = ({ context, username }) => {
             <h4 className="cat-title shadow">Social Rogue</h4>
             <p className="category-box">Social engineering</p>
             <p className="category-box">Cryptology</p>
-            <p className="category-box">Forsenic</p>
+            <p className="category-box">Forensic</p>
             <Link
               className="link path-link"
               exact
