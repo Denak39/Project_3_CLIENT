@@ -41,7 +41,6 @@ class FormSignup extends Component {
       return <Redirect to="/" />;
     }
 
-
     return (
       <form
         autoComplete="off"
@@ -49,47 +48,42 @@ class FormSignup extends Component {
         onChange={this.handleChange}
         onSubmit={this.handleSubmit}
       >
-
         <div className="form-div">
-        <label htmlFor="username">Username</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.username}
-          type="text"
-          id="username"
-          name="username"
-          className="signup signup-input"
-        />
+          <label htmlFor="username">Username</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.username}
+            type="text"
+            id="username"
+            name="username"
+            className="signup signup-input"
+          />
         </div>
 
-
         <div className="form-div">
-        <label htmlFor="email">Email</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.email}
-          type="email"
-          id="email"
-          name="email"
-          placeholer="hacker@hack.com"
-          className="signup-input signup-email"
-        />
-        </div>
-      
-
-
-        <div className="form-div">
-        <label htmlFor="password">Password</label>
-        <input
-          onChange={this.handleChange}
-          value={this.state.password}
-          type="password"
-          id="password"
-          name="password"
-          className="signup-input signup-password"
-        />
+          <label htmlFor="email">Email</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.email}
+            type="email"
+            id="email"
+            name="email"
+            placeholer="hacker@hack.com"
+            className="signup-input signup-email"
+          />
         </div>
 
+        <div className="form-div">
+          <label htmlFor="password">Password</label>
+          <input
+            onChange={this.handleChange}
+            value={this.state.password}
+            type="password"
+            id="password"
+            name="password"
+            className="signup-input signup-password"
+          />
+        </div>
 
         <div className="form-div">
         <label htmlFor="accountType">Role</label>
@@ -109,7 +103,6 @@ class FormSignup extends Component {
         </select>
         </div>
 
-             
         <div className="pic-upload form-div">
           <div>
             <label
@@ -133,10 +126,7 @@ class FormSignup extends Component {
           </div>
         </div>
 
-
         <button className="btn-transparent">Create account!</button>
-
-
       </form>
     );
   }
