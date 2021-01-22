@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Home.css";
+import "../styles/FormSignupStyle.css";
 import logoDedSec from "../pictures/logo_dedsec_white.png";
 import "../styles/NavMain.css";
 //import background from "../pictures/background.jpg";
@@ -15,7 +16,7 @@ class Home extends React.Component {
               <div className="main-left">
                 <div className="who">
                   <h1 className="tracking-in-expand">Who are we?</h1>
-                  <img class="logoDedSec" src={logoDedSec} alt="Ded-Sec Logo" />
+                  <img className="logoDedSec" src={logoDedSec} alt="Ded-Sec Logo" />
                 </div>
                 <div className="main-intro">
                   <p className="slogan">Learn, teach, share, protect</p>
@@ -28,6 +29,11 @@ class Home extends React.Component {
                     Join us, help us, protect yourself.
                   </p>
                 </div>
+                <div>
+                <Link exact to="/course/categories">
+                  <button className="btn-transparent">Go check our courses!</button>
+                </Link>
+              </div>
               </div>
 
               <hr className="purple-line" />
@@ -55,11 +61,6 @@ class Home extends React.Component {
                     <li>Contribute and enhance our knowledge</li>
                   </ul>
                 </div>
-              </div>
-              <div>
-                <Link exact to="/course/categories">
-                  <button>Go check our courses!</button>
-                </Link>
               </div>
             </section>
           </div>

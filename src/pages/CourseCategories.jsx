@@ -21,7 +21,7 @@ const CourseCategories = ({ context, username }) => {
               exact
               to="/course/categories/network"
             >
-              Network Path
+              Click here to become a Network Warlock!
             </Link>
           </div>
           <div className="Keyboard Warrior category-divs">
@@ -34,7 +34,7 @@ const CourseCategories = ({ context, username }) => {
               exact
               to="/course/categories/programming"
             >
-              Programming Path
+              Train to become a Keyboard Warrior!
             </Link>
           </div>
           <div className="Social Rogue category-divs">
@@ -47,7 +47,7 @@ const CourseCategories = ({ context, username }) => {
               exact
               to="/course/categories/hacking"
             >
-              Hacking Path
+              Choose to become a Social Rogue! 
             </Link>
           </div>
         </div>

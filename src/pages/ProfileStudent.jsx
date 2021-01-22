@@ -11,7 +11,8 @@ const ProfileStudent = (props) => {
       <h1>Ded-Sec</h1>
       <hr />
       <h1>Student Space</h1>
-      <img src={student} alt="student.png" />
+      {/* <img src={student} alt="student.png" /> */}
+      <i className="fas fa-user-graduate"></i>
       <p>accountType: {props.context.user.accountType}</p>
       <p>Student</p>
       <ul>
