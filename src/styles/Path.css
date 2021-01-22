@@ -7,7 +7,8 @@
 }
 
 .box {
-  background-color: #222222;
+  /* background-color: #222222;  */
+  background-color: #000000;
   /* background-color: rgb(20, 20, 20); */
   /* background-color: transparent; */
   position: relative;
@@ -21,7 +22,7 @@
 }
   .box img {
     width: 227px;
-    padding-top: 50px;
+    padding-top: 40px;
     margin-left: 110px;
   }
   .box:hover .banner {
@@ -32,10 +33,11 @@
   font-family: Helvetica;
   position: absolute;
   /* background-color: rgba(34, 34, 34, .8); */
-  background-color: rgba(34, 34, 34, .8);
+  /* background-color: rgba(0, 0, 0, 0.8);  */
+  background-color: rgba(0, 0, 0, 0.8);  
   top: -400px;
   max-width: 450px;
-  height: 250px;
+  height: 227px;
   transition: all 0.5s ease-in-out;
   margin-left: 45px;
 
@@ -51,5 +53,5 @@
      .banner:hover a {
         /* color: #61dafa; */
         /* color: rgb(32,194,14); */
-        color: rgb(0, 255, 234)
+        color: rgb(97, 143, 161)
 }

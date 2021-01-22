@@ -1,0 +1,9 @@
+.oneLesson-div {
+   display: flex;
+}
+
+.lesson-title {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

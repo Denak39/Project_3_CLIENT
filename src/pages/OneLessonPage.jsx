@@ -5,6 +5,8 @@ import apiHandler from "../api/apiHandler";
 import draftToHtml from "draftjs-to-html";
 import htmlToDraft from "html-to-draftjs";
 import { convertToRaw } from "draft-js";
+import "../styles/OneLesson.css";
+
 class OneLessonPage extends React.Component {
   static contextType = UserContext;
   state = {
@@ -27,8 +29,8 @@ class OneLessonPage extends React.Component {
     console.log(this.state.lesson);
     return (
       this.state.lesson && (
-        <div>
-          <h1>Lesson title: {this.state.lesson.name}</h1>
+        <div className="oneLesson-div">
+          <h1 className="lesson-title">Lesson title: {this.state.lesson.name}</h1>
           <h2>Lesson difficulty: {this.state.lesson.difficulty}</h2>
           {/* <p>{this.state.lesson}</p> */}
           <div
