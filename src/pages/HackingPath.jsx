@@ -35,10 +35,9 @@ class HackingLessons extends React.Component {
           return (
             <div key={lesson._id}>
               <Link to={`/lessons/${lesson._id}`}>
-                <h1>{lesson.name}</h1>
+                <h1>Lesson title: {lesson.name}</h1>
               </Link>
-              <p>{lesson.trainerId.username}</p>
-              <h3>{lesson.updated_at}</h3>
+              <h2>posted by: {lesson.trainerId.username}</h2>
             </div>
           );
         })}

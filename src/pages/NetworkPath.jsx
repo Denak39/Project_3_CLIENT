@@ -35,10 +35,9 @@ class NetworkLessons extends React.Component {
           return (
             <div key={lesson._id}>
               <Link to={`/lessons/${lesson._id}`}>
-                <h1>{lesson.name}</h1>
+                <h1>Lesson title: {lesson.name}</h1>
               </Link>
-              <h2>{lesson.trainerId}</h2>
-              <h3>{lesson.updated_at}</h3>
+              <h2>posted by: {lesson.trainerId.username}</h2>
             </div>
           );
         })}
