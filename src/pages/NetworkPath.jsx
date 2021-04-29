@@ -36,18 +36,17 @@ class NetworkLessons extends React.Component {
         {this.state.lessons.map((lesson) => {
           return (
             <div className="box">
-            <div className="banner">
-            <div className="p" key={lesson._id}>
-               <Link to={`/lessons/${lesson._id}`}>
-                <h1>Lesson title: {lesson.name}</h1>
-              </Link>
-              <h2>posted by: {lesson.trainerId.username}</h2>
-              {/* <hr className="path-hr"/>  */}
+              <div className="banner">
+                <div className="p" key={lesson._id}>
+                  <Link to={`/lessons/${lesson._id}`}>
+                    <h1>Lesson title: {lesson.name}</h1>
+                  </Link>
+                  <h2>posted by: {lesson.trainerId.username}</h2>
+                  {/* <hr className="path-hr"/>  */}
+                </div>
+              </div>
+              <img className="logoDedSec" src={logoDedSec} alt="Ded-Sec Logo" />
             </div>
-            </div>
-            <img className="logoDedSec" src={logoDedSec} alt="Ded-Sec Logo" />
-            </div>
-           
           );
         })}
       </div>
